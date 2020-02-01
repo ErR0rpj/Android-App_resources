@@ -41,6 +41,8 @@ public class MainActivity extends Activity {
         username_details.addRule(RelativeLayout.CENTER_HORIZONTAL);
 
         Resources r=getResources();             // This compile the resources associated with app.
+       int  px = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,200,r.getDisplayMetrics());   // It converts DIP in pixels. the third argument get display matrix of the phone which we use.
+        username.setWidth(px);
         username_details.setMargins(0,0,0,50);
 
         layout1.addView(username,username_details);             // This is t add username. It must ne at last line to get rid of app failure.
